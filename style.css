@@ -31,6 +31,7 @@ header{
 /* section */
 section{
     width: 100%;
+    height: 350px;
 }
 #toggle-button{
     width: 80px;
@@ -62,18 +63,20 @@ section{
     height: 30px;
 }
 /* section end */
-/* Keyframes */
-@keyframes comeIn {
-    0%{
-        margin-left: -205px;
-    }
-    100%{
-        margin-left: 5px;
-    }
+/* footer */
+footer{
+    height: 101px;
+    width: 100%;
+    background: #363636;
 }
-/* Keyframes end */
-/* Classes */
-.comeIn{
-    animation: comeIn 0.3s;
+#autor{
+    font-family: 'Hammersmith One';
+    font-size: 15px;
+    color: #ffffff;
 }
-/* Classes end */
+#div-autor{
+    text-align: center;
+    width: 100%;
+    line-height: 50px;
+}
+/* footer end */
