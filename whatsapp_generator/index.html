@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="alert">
+        <span id="alertText"></span>
+        <div id="divX">
+            <span id="alertX">X</span>
+        </div>
+    </div>
+    <button value="samaracutaca" id="button1">adicionar</button>
+    <button value="maçã" id="button2">adicionar</button>
+    <a href="" id="aLink" title="link"><button>enviar</button></a>
+</body>
+<script src="whats.js"></script>
+<script>
+    insertIntoLink("5511966311204", "The order is")
+    
+    // Vars
+    var button1 = document.querySelector("button#button1"); pushValue(button1); 
+    var button2 = document.querySelector("button#button2"); pushValue(button2); 
+    var aLink = document.querySelector("a#aLink");send(aLink);
+    var alerts = document.querySelector("div.alert");
+    clickItem(button1, alerts);
+    clickItem(button2, alerts);
+</script>
+</html>
