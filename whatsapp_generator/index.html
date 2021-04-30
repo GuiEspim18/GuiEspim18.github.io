@@ -14,15 +14,26 @@
             <span id="alertX">X</span>
         </div>
     </div>
-    <button value="samaracutaca" id="button1">adicionar</button>
+    <input type="text" id="numberInput">
+    <input type="submit" value="submit" id="submitInput">
+    <button value="banana" id="button1">adicionar</button>
     <button value="maçã" id="button2">adicionar</button>
     <a href="" id="aLink" title="link"><button>enviar</button></a>
 </body>
 <script src="whats.js"></script>
 <script>
-    insertIntoLink("5511966311204", "The order is")
+    
     
     // Vars
+    var numberInput = document.querySelector("input#numberInput");
+    var submitInput = document.querySelector("input#submitInput");
+
+    submitInput.addEventListener('click',()=>{
+        insertIntoLink(`${numberInput.value}`, "The order is");
+    });
+        
+
+
     var button1 = document.querySelector("button#button1"); pushValue(button1); 
     var button2 = document.querySelector("button#button2"); pushValue(button2); 
     var aLink = document.querySelector("a#aLink");send(aLink);
