@@ -10,8 +10,16 @@ function insertIntoLink(phone, message){
 }
 function clickItem(value, alerts){
     value.addEventListener("click",()=>{
-        add.push(value.value)
-        alertFunction(value, alerts)
+        if(value.textContent!="remove"){
+            add.push(value.value);
+            value.textContent="remove";
+            alertFunction(alerts);
+        }else if(value.textContent=="remove"){
+            add.splice(add.indexOf(value.value), 1);
+            value.textContent="add";
+            removeAlert(alerts);
+            // Preciso adicionar alguma forma para voltar a ter o conteúdo de texto antigo
+        }
     });
 }
 function send(value){
@@ -28,20 +36,41 @@ function send(value){
         }
     });
 }
-function alertFunction(value, alerts){
+function alertFunction(alerts){
     let close = alerts.querySelector("div#divX");
-    let span = alerts.querySelector("span#alertText");
-    span.textContent=`${value.value} added.`;
     alerts.style.visibility="visible";
+    alerts.style.background="green";
     alerts.style.marginLeft="1%";
     close.addEventListener("click",()=>{
         alerts.style.marginLeft="-100%";
         alerts.style.visibility="hidden";
         alerts.style.position="absolute";
     });
-    setTimeout(()=>{
+    if (alerts.style.visibility=="visible"){
+        setTimeout(()=>{
+            alerts.style.marginLeft="-100%";
+            alerts.style.visibility="hidden";
+            alerts.style.position="absolute";
+        }, 3000);
+    }
+}
+function removeAlert(alerts){
+    let spanText = alerts.querySelector("span#alertText");
+    let close = alerts.querySelector("div#divX");
+    spanText.textContent="removed!"
+    alerts.style.visibility="visible";
+    alerts.style.background="red";
+    alerts.style.marginLeft="1%";
+    close.addEventListener("click",()=>{
         alerts.style.marginLeft="-100%";
         alerts.style.visibility="hidden";
-        alerts.style.position="absolute";
-    }, 4000);
+        alerts.style.visibility="absolute";
+    });
+    if(alerts.style.visibility=="visible"){
+        setTimeout(()=>{
+            alerts.style.marginLeft="-100%";
+            alerts.style.visibility="hidden";
+            alerts.style.position="absolute";
+        }, 4000);
+    }
 }

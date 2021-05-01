@@ -1,7 +1,5 @@
 .alert{
-    background: #008000;
-    min-width: 15rem;
-    max-width: 20rem;
+    width: 15rem;
     height: 50px;
     margin: 0 auto;
     position: absolute;
@@ -38,4 +36,9 @@
     height: 100%;
     cursor: pointer;
     text-align: center;
+}
+@media screen and (max-width: 300px){
+    .alert{
+        width: 10rem;
+    }
 }

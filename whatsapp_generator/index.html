@@ -6,34 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            margin: 0 auto;
+            padding: 0;
+        }
+        html{
+            font-size: 16px;
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+        }
+        header h1{
+            font-family: arial;
+            font-size: 1.5rem;
+            color: #3a3a3a;
+            line-height: 45px;
+        }
+        .divInputTxt{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+        .send{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+        .inputs{
+            display: flex;
+            align-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        #numberInput{
+            width: 9.5rem;
+            height: 2rem;
+        }
+        #submitInput{
+            height: 2rem;
+        }
+        #button1, #button2, #button3{
+            width: 10rem;
+            height: 2rem;
+        }
+        @media screen and (min-width: 455px){
+            header h1{
+                font-family: arial;
+                font-size: 3rem;
+                color: #3a3a3a;
+                line-height: 45px;
+            }
+            #numberInput{
+                width: 14.5rem;
+                height: 2rem;
+            }
+            #submitInput{
+                height: 2rem;
+            }
+            #button1, #button2, #button3{
+                width: 15rem;
+                height: 2rem;
+            }
+            #button1, #button2{
+                margin-bottom: 15px;
+            }
+            #button1{
+                margin-top: 15px;
+            }
+        }
+        @media screen and (min-width: 700px){
+            #numberInput{
+                width: 19.5rem;
+                height: 2rem;
+            }
+            #submitInput{
+                height: 2rem;
+            }
+            #button1, #button2, #button3{
+                width: 20rem;
+                height: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="alert">
-        <span id="alertText"></span>
-        <div id="divX">
-            <span id="alertX">X</span>
+    <header>
+        <h1>Test of my plugin : )</h1>
+    </header>
+    <hr>
+    <main>
+        <div class="alert">
+            <span id="alertText">added!</span>
+            <div id="divX">
+                <span id="alertX">X</span>
+            </div>
         </div>
-    </div>
-    <input type="text" id="numberInput">
-    <input type="submit" value="submit" id="submitInput">
-    <button value="banana" id="button1">adicionar</button>
-    <button value="maçã" id="button2">adicionar</button>
-    <a href="" id="aLink" title="link"><button>enviar</button></a>
+        <div class="divInputTxt">
+            <div class="inputs">
+                <input type="text" id="numberInput">
+                <input type="submit" value="submit" id="submitInput">
+            </div>
+        </div>
+        <div class="send">
+            <div class="inputs">
+                <button value="banana" id="button1">add</button>
+                <button value="maçã" id="button2">add</button>
+                <a href="" id="aLink" title="link"><button id="button3">enviar</button></a>
+            </div>
+        </div>
+    </main>
+        
 </body>
 <script src="whats.js"></script>
 <script>
     
     
-    // Vars
+   
     var numberInput = document.querySelector("input#numberInput");
     var submitInput = document.querySelector("input#submitInput");
 
     submitInput.addEventListener('click',()=>{
         insertIntoLink(`${numberInput.value}`, "The order is");
+        numberInput.value="";
     });
         
 
-
+    // Vars
     var button1 = document.querySelector("button#button1"); pushValue(button1); 
     var button2 = document.querySelector("button#button2"); pushValue(button2); 
     var aLink = document.querySelector("a#aLink");send(aLink);
