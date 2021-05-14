@@ -1,0 +1,166 @@
+/* Configurações do documento */
+body{
+    margin: 0 auto;
+    padding: 0;
+    background: rgb(236, 236, 236);
+}
+html{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header{
+    background: linear-gradient(to bottom, #0d83ad, #135b75);
+    height: 50px;
+}
+header div.title{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+header div.title h1{
+    color: #fff;
+    line-height: 50px;
+    font-size: 2rem;
+}
+
+/* Barra de navegação */
+.pos-f-t{
+    top: 0;
+    position: sticky;
+    z-index: 100;
+}
+.navbar{
+    background: #135b75;
+}
+.p-4{
+    background: #135b75;
+    text-align: center;
+}
+.p-4 h5{
+    text-align: center;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.menu a{
+    transition: 0.3s;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    flex: 1;
+    text-decoration: none;
+    height: 50px;
+    line-height: 50px;
+}
+.menu a:hover{
+    background: #0a6b8f;
+}
+
+/* Main */
+.container h1{
+    text-align: center;
+    color: #555555;
+    line-height: 100px;
+}
+.perfil-section{
+    width: 100%;
+}
+.title-header{
+    background: linear-gradient(to bottom, #0d83ad, #135b75);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+.perfil-dados{
+    display: flex;
+    justify-content: center;
+}
+.dados{
+    font-size: 1.5rem;
+    color: #555555;
+    /* border: solid 1px #b6b6b6; */
+}
+.dados .texto{
+    width: 80%;
+    margin: 5% auto;
+}
+.conteudo{
+    font-size: 2rem;
+    color: #555555;
+    /* border: solid 1px #b6b6b6; */
+}
+.conteudo p{
+    width: 80%;
+    margin: 5% auto;
+}
+.obj-profissional{
+    margin: 30px 0;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, #0d83ad, #135b75);
+}
+.footer-cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-txt{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* medias */
+@media screen and (min-width:240px){
+    header div.title h1{
+        font-size: 1rem;
+    }
+    .container h1{
+        font-size: 0.8rem;
+        line-height: 50px;
+    }
+    .title-header h2{
+        font-size: 1rem;
+    }
+    .dados{
+        font-size: 1rem;
+    }
+    .conteudo{
+        font-size: 1rem;
+    }
+    .footer-txt{
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 800px){
+    header div.title h1{
+        font-size: 2rem;
+    }
+    .container h1{
+        font-size: 2rem;
+        line-height: 100px;
+    }
+    .title-header h2{
+        font-size: 2rem;
+    }
+    .dados{
+        font-size: 1.5rem;
+    }
+    .conteudo{
+        font-size: 2rem;
+    }
+    .footer-txt{
+        font-size: 1.5rem;
+    }
+}
