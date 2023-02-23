@@ -1,0 +1,18 @@
+@import "/src/assets/css/main/main.scss";
+
+// Mat divider
+
+mat-divider {
+    background: $mainColor_3;
+}
+
+// Angular material styles
+
+.mat-datepicker-toggle-active {
+    color: $secondary_5;
+}
+
+.mat-calendar-body-selected {
+    background-color: $secondary_5;
+    color: $mainColor_2;
+}
