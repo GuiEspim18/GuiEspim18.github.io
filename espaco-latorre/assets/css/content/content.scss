@@ -1,0 +1,45 @@
+@import "/src/assets/css/main/main.scss";
+
+// content
+
+.content {
+    padding: 2rem 0;
+    height: 100%;
+
+}
+
+// container
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+// links
+
+a {
+    font-size: 1rem;
+}
+
+
+// global font styles
+
+h2 {
+    font-size: 2.5rem !important;
+    line-height: 3rem;
+    font-weight: 400 !important;
+}
+
+p {
+    font-size: 1.5rem !important;
+    line-height: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    .content {
+        padding: 1rem;
+    }
+
+}
