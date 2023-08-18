@@ -196,13 +196,14 @@ body {
     background: transparent;
     border: none;
     outline: none;
-    flex: 1;
+    width: 85%;
     color: var(--text-color-3);
 }
 
 .ipt-search span {
     color: var(--text-color-3);
     cursor: pointer;
+    width: 15%;
 }
 
 .ipt-search .search::placeholder {
